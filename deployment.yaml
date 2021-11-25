@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: mydemo
-        image: 048981882745.dkr.ecr.us-east-1.amazonaws.com/demo
+        image: 048981882745.dkr.ecr.us-east-1.amazonaws.com/demo:6269efbb3213be5eccc71983570d24a3c070cc87
         ports:
           - containerPort: 80
