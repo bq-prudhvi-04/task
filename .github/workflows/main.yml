@@ -34,4 +34,10 @@ jobs:
         docker push -a $ECR_REGISTRY/$ECR_REPOSITORY   
         
     - name: Update kube config
-      run: aws eks update-kubeconfig --name demo --region eu-west-1    
+      run: aws eks update-kubeconfig --name demo --region eu-west-1 
+      
+    - name: Deploy image to Amazon EKS
+      run: |
+        kubectl apply -f eks/deployment.yaml
+        kubectl apply -f eks/loadbalancer.yaml
+       
