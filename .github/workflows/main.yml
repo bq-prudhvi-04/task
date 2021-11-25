@@ -38,6 +38,6 @@ jobs:
       
     - name: Deploy image to Amazon EKS
       run: |
-        kubectl apply -f eks/deployment.yaml
-        kubectl apply -f eks/loadbalancer.yaml
+        kubectl apply -f deployment.yaml
+        kubectl apply -f loadbalancer.yaml
        
